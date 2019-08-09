@@ -1,0 +1,27 @@
+body{
+    background: #222222;
+}
+
+header{
+    background: #ff0000;
+    text-align: center;
+}
+
+nav{
+    background: green;
+    font-size: 15pt;
+    color: aquamarine;
+}
+
+section{
+    background : gray;
+}
+
+aside{
+    background : #0000ff;
+}
+
+footer{
+    background: orange;
+}
+

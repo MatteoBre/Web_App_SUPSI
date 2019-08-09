@@ -1,0 +1,11 @@
+#register{
+    max-width: 450px;
+}
+
+#footer{
+    max-width: 450px;
+}
+
+.redBorder{
+    border:2px solid red;
+}

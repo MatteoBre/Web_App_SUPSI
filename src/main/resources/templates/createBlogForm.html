@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inserimento Blogpost</title>
+    <link th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}" rel="stylesheet">
+    <!--<link rel="stylesheet" href="/css/form.css">-->
+</head>
+
+<body>
+<div th:replace="~{MasterPage :: header}"></div>
+    <div class="container">
+    <form action="#" th:action="${#httpServletRequest.requestURI}" th:object="${blogpost}" method="post">
+        <section>
+            <p>Titolo :
+                <div class="">
+                    <input type="text" class="form-control" th:field="*{title}">
+                </div>
+            </p>
+        </section>
+        <section>
+            <!--<p>Autore :
+                <div class="autore">
+                    <select class="form-control" th:field="*{utente}">
+                            <div th:each="author :${authors}" th:field="*{utente}">
+                                <option th:value="${author.getUsername()}" th:text="${author.getUsername()}">sport</option>
+                            </div>
+                    </select>
+                </div>
+            </p>-->
+        </section>
+        <section>
+            <p>Categoria :
+                <div class="categoria">
+                    <select class="form-control" th:field="*{categoria}">
+                        <div th:each="category :${categories}">
+                            <option th:value="${category.getIdCategoria()}" th:text="${category.getIdCategoria()}">sport</option>
+                        </div>
+                    </select>
+                </div>
+            </p>
+        </section>
+        <section>
+            <p>Testo Descrittivo</p>
+            <div class="textarea">
+                <textarea class="form-control" th:field="*{text}"></textarea>
+            </div>
+        </section>
+        <input class="btn btn-primary mt-4" type="submit">
+        <a th:href="@{/}" class="btn btn-secondary mt-4">Cancel</a>
+    </form>
+    <div th:replace="~{MasterPage :: footer}"></div>
+</div>
+</body>
+
+</html>

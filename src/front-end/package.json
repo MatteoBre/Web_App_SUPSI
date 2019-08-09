@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "circular-reveal",
+  "version": "1.0.0",
+  "description": "A material like circular reveal animation",
+  "main": "dist/circular.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "cross-env NODE_ENV=test karma start"
+  },
+  "keywords": [
+    "animation",
+    "material",
+    "circular"
+  ],
+  "author": "Nicola Rizzo",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-istanbul": "^5.1.1",
+    "cross-env": "^5.2.0",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-coverage-istanbul-reporter": "^2.0.5",
+    "karma-jasmine": "^2.0.1",
+    "karma-remap-istanbul": "^0.6.0",
+    "karma-webpack": "^3.0.5",
+    "nyc": "^13.3.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jsdom": "^14.0.0"
+  }
+}
